@@ -1,0 +1,127 @@
+<!-- <app-nav-bar></app-nav-bar> -->
+
+<!-- <div *ngIf="loginPage">
+  <app-signin></app-signin>
+</div> -->
+
+<!-- <button (click)="loading()">loading</button> -->
+
+<div class="spiner" [hidden]="statusLoading">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="loginPage">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <img
+        src="./../assets/Screenshot 2566-12-20 at 15.47.13.png"
+        style="width: 100px; height: 50px"
+        class="ml-5"
+      />
+      <div class="container">
+        <div class="d-flex mt-4">
+          <div>
+            <!-- <button class="ml-5" mat-button (click)="opened = !opened"> -->
+            <mat-icon class="ml-5" (click)="opened = !opened">menu</mat-icon>
+            <!-- </button> -->
+          </div>
+          <div class="search-menu ml-4">
+            <form>
+              <input type="search" matInput placeholder="Menu Search" />
+              <mat-icon matSuffix>search</mat-icon>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="d-flex"> -->
+      <div><mat-icon>notifications</mat-icon></div>
+      <a style="color: black; font-size: 14px; font-weight: 3" class="ml-2"
+        >Ms. Test Angular</a
+      >
+      <img src="./../assets/3781973.png" class="avatar ml-2" />
+      <!-- </div> -->
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side">
+      <mat-list>
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/"
+            ><mat-icon class="mr-2">home</mat-icon>Home</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/cloud-periodic/ag-periodic"
+            ><mat-icon class="mr-2">all_inbox</mat-icon>My Inbox</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a
+            routerLinkActive="active"
+            routerLink="/cloud-periodic/enterprise-overview"
+            ><mat-icon class="mr-2">inbox</mat-icon>User Management</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a
+            routerLinkActive="active"
+            routerLink="/cloud-periodic/customizing-cells"
+            ><mat-icon class="mr-2">send</mat-icon>Self Service</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a
+            routerLinkActive="active"
+            routerLink="/cloud-periodic/custom-component-overview"
+            ><mat-icon class="mr-2">account_tree</mat-icon>Organization</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/cloud-periodic"
+            ><mat-icon class="mr-2">people</mat-icon>Employee Profile</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/"
+            ><mat-icon class="mr-2">schedule</mat-icon>Time Management</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/"
+            ><mat-icon class="mr-2">login</mat-icon>Interface In</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/"
+            ><mat-icon class="mr-2">price_change</mat-icon>Payroll</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/"
+            ><mat-icon class="mr-2">desktop_windows</mat-icon>Backgroung
+            Monitor</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/"
+            ><mat-icon class="mr-2">paid</mat-icon>Benifits</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/"
+            ><mat-icon class="mr-2">vertical_align_top</mat-icon>Import</a
+          ></mat-list-item
+        >
+        <mat-list-item
+          ><a routerLinkActive="active" routerLink="/"
+            ><mat-icon class="mr-2">logout</mat-icon>Interface Out</a
+          ></mat-list-item
+        >
+      </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
