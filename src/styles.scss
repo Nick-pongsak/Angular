@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: fixed; // lock page scoll up/down
+}
+body {
+  margin: 0;
+  font-family: 'Gothic A1', sans-serif;
+  background-color: #f0f0f4;
+
+  .mat-card {
+    border-radius: 0.1rem;
+  }
+}
+
+.material-icons{
+    vertical-align: middle;
+}
+
+
+
